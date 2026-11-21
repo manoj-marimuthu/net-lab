@@ -1,13 +1,13 @@
 ## Network lab
 
 In this repository, I explore various networking concepts related
-to communication, protocols, vulnerabilities and more. Available
-topics:
+to communication, protocols, vulnerabilities and more. I will be
+adding more and more as I learn. As of now, Available topics are
 
 <table>
     <tr>
         <td>Lab</td>
-        <td>What it has ?</td>
+        <td>Contents</td>
     </tr>
     <tr>
         <td>ARP</td>
