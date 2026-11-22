@@ -21,8 +21,8 @@ static void traverse_bytes(uint8_t* data, size_t length){
 int main(void){
 	// input fields and packet construction
 	uint8_t src_mac[] = {0x8A, 0x41,0x40, 0x98,0xB7, 0x77};
-	uint8_t src_ip[] = {0x0A,0x4D,0x00,0x01};
-	uint8_t rec_ip[] = {0x0A,0x4D,0x00,0x02};
+	uint8_t src_ip[] = {0x14,0x23,0x02,0x01};
+	uint8_t rec_ip[] = {0x14, 0x23, 0x02, 0x02};
 	uint8_t rec_mac[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 	uint8_t op[] = {0x00, 0x01};
 	uint8_t eth_dest_mac[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
@@ -35,7 +35,7 @@ int main(void){
 	struct sockaddr_ll addr = {0};
 	addr.sll_family = AF_PACKET;
 	addr.sll_protocol = htons(ETH_P_ALL);
-	addr.sll_ifindex = if_nametoindex("arp0");
+	addr.sll_ifindex = if_nametoindex("eth0");
 
 	if(addr.sll_ifindex == 0){
 		perror("if_nametoindex");
